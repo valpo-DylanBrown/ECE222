@@ -3,12 +3,12 @@
 -- Dylan Brown
 -- ***********
 
-entity problemA is
+entity problem250 is
   port(x1,x2,x3 : IN  BIT;
        f        : OUT BIT);
-end problemA;
+end problem250;
 
-architecture dataflow of problemA is
+architecture dataflow of problem250 is
   begin
     f<=(x1 XOR x3) OR (NOT x2);
 end dataflow;
@@ -20,12 +20,12 @@ end dataflow;
 -- Dylan Brown
 -- ***********
 
-entity problemB is
+entity problem251 is
   port(x1,x2,x3,x4 : IN  BIT;
        f1,f2       : OUT BIT);
-end problemB;
+end problem251;
 
-architecture dataflow of problemB is
+architecture dataflow of problem251 is
   begin
     f1<=(x1 AND NOT x3) OR (x2 AND NOT x3) OR (NOT x3 AND NOT x4) OR (x1 AND x2) OR (x1 AND NOT x4);
     f2<=(x1 OR NOT x3) AND (x1 OR x2 OR NOT x4) AND (x2 OR NOT x3 OR NOT x4);
@@ -38,12 +38,12 @@ end dataflow;
 -- Dylan Brown
 -- ***********
 
-entity problemC is
+entity problem445 is
   port(x1,x2,x3,x4,x5 : IN  BIT;
        f              : OUT BIT);
-end problemC;
+end problem445;
 
-architecture dataflow of problemC is
+architecture dataflow of problem445 is
   signal g,k          : BIT
   begin
     g<=x1 OR x2 OR x5;
