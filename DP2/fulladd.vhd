@@ -1,0 +1,20 @@
+--*************
+-- Dylan Brown
+-- ECE222 DP 2
+-- Due 2/18
+--*************
+
+entity fulladd is
+  port(x, y, ci, a: IN  BIT
+      s, co,      : OUT BIT);
+end fulladd;
+
+architecture brown of fulladd is
+
+  signal(b  : BIT);
+
+begin
+  b<= x AND y;
+  s<= a XOR b XOR ci;
+  co<= (a AND b) OR (a AND ci) or (b AND ci);
+end brown;
