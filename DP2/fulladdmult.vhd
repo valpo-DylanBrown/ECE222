@@ -5,13 +5,16 @@
 --*************
 
 entity fulladd is
-  port(a, b, ci: IN  BIT
+  port(a, x, y, ci: IN  BIT
       s, co,      : OUT BIT);
 end fulladd;
 
 architecture brown of fulladd is
 
+  signal(b  : BIT);
+
 begin
+  b<= x AND y;
   s<= a XOR b XOR ci;
   co<= (a AND b) OR (a AND ci) or (b AND ci);
 end brown;
