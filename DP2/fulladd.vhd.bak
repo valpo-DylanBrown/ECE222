@@ -7,7 +7,7 @@
 
 entity fulladd is
   port(a, b, ci: IN  BIT;
-      s, co      : OUT BIT);
+      s, co,      : OUT BIT);
 end fulladd;
 
 architecture brown of fulladd is

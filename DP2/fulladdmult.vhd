@@ -4,14 +4,14 @@
 -- Due 2/18
 --*************
 
-entity fulladd is
-  port(a, x, y, ci: IN  BIT
-      s, co,      : OUT BIT);
-end fulladd;
+entity fulladdmult is
+  port(a, x, y, ci: IN  BIT;
+      s, co      : OUT BIT);
+end fulladdmult;
 
-architecture brown of fulladd is
+architecture brown of fulladdmult is
 
-  signal(b  : BIT);
+  signal b  : BIT;
 
 begin
   b<= x AND y;

@@ -1,0 +1,115 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dF:/fpga
+Ecomb_mult4
+Z0 w1550103562
+Z1 dC:/Users/Dylan/Documents/GitHub/ECE222/DP2
+Z2 8C:/Users/Dylan/Documents/GitHub/ECE222/DP2/comb_mult4.vhd
+Z3 FC:/Users/Dylan/Documents/GitHub/ECE222/DP2/comb_mult4.vhd
+l0
+L7
+Voo@70QLXKObc8`>RfYgm?3
+!s100 hHMCBk<6S@iSOGzl5TZ3g0
+Z4 OV;C;10.5b;63
+32
+Z5 !s110 1550103567
+!i10b 1
+Z6 !s108 1550103567.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Dylan/Documents/GitHub/ECE222/DP2/comb_mult4.vhd|
+Z8 !s107 C:/Users/Dylan/Documents/GitHub/ECE222/DP2/comb_mult4.vhd|
+!i113 1
+Z9 o-work work -2002 -explicit
+Z10 tExplicit 1 CvgOpt 0
+Abrown
+DEx4 work 10 comb_mult4 0 22 oo@70QLXKObc8`>RfYgm?3
+l22
+L12
+VidOT9fm2?h_MA`N6PIeBA1
+!s100 408_SN:_dSOOZiOPWEfhf2
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Efulladd
+Z11 w1550094573
+R1
+Z12 8C:/Users/Dylan/Documents/GitHub/ECE222/DP2/fulladd.vhd
+Z13 FC:/Users/Dylan/Documents/GitHub/ECE222/DP2/fulladd.vhd
+l0
+L8
+V6l?5Y5kI[oSmAN<Cji6oR1
+!s100 N_:hQil^;=@LQ8FPTcP693
+R4
+32
+Z14 !s110 1550103566
+!i10b 1
+Z15 !s108 1550103566.000000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Dylan/Documents/GitHub/ECE222/DP2/fulladd.vhd|
+Z17 !s107 C:/Users/Dylan/Documents/GitHub/ECE222/DP2/fulladd.vhd|
+!i113 1
+R9
+R10
+Abrown
+DEx4 work 7 fulladd 0 22 6l?5Y5kI[oSmAN<Cji6oR1
+l15
+L13
+VbgCd[dm<fR:j;nNiE5X[22
+!s100 OZZ11bcC?f>5=]Y=DOVKW2
+R4
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R9
+R10
+Efulladdmult
+Z18 w1550100540
+R1
+Z19 8C:\Users\Dylan\Documents\GitHub\ECE222\DP2\fulladdmult.vhd
+Z20 FC:\Users\Dylan\Documents\GitHub\ECE222\DP2\fulladdmult.vhd
+l0
+L7
+VHn4ebY]Fc^T9`:`gMRfHN2
+!s100 85A4eQVn`[X`9PQHYUeB>1
+R4
+32
+R14
+!i10b 1
+R15
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Dylan\Documents\GitHub\ECE222\DP2\fulladdmult.vhd|
+Z22 !s107 C:\Users\Dylan\Documents\GitHub\ECE222\DP2\fulladdmult.vhd|
+!i113 1
+R9
+R10
+Abrown
+DEx4 work 11 fulladdmult 0 22 Hn4ebY]Fc^T9`:`gMRfHN2
+l16
+L12
+VPA1W7DZiaVg<Xc3G;_6of2
+!s100 O18PSG:4>9Xn6XjYKE^=g0
+R4
+32
+R14
+!i10b 1
+R15
+R21
+R22
+!i113 1
+R9
+R10
