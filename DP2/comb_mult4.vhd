@@ -21,10 +21,10 @@ architecture brown of comb_mult4 is
 
   begin
     GND <= '0';
-    inst : fulladdmult port map(a=>'0', x=>m(0), y=>q(0), ci=>'0', s=>sig0, co=>cout0);
-    inst1 : fulladdmult port map(a=>'0', x=>m(1), y=>q(0), ci=>cout0, s=>sig1, co=>cout1);
-    inst2 : fulladdmult port map(a=>'0', x=>m(2), y=>q(0), ci=>cout1, s=>sig2, co=>cout2);
-    inst3 : fulladdmult port map(a=>'0', x=>m(3), y=>q(0), ci=>cout2, s=>sig3, co=>cout3);
+    inst : fulladdmult port map(a=>GND, x=>m(0), y=>q(0), ci=>'0', s=>sig0, co=>cout0);
+    inst1 : fulladdmult port map(a=>GND, x=>m(1), y=>q(0), ci=>cout0, s=>sig1, co=>cout1);
+    inst2 : fulladdmult port map(a=>GND, x=>m(2), y=>q(0), ci=>cout1, s=>sig2, co=>cout2);
+    inst3 : fulladdmult port map(a=>GND, x=>m(3), y=>q(0), ci=>cout2, s=>sig3, co=>cout3);
     inst4 : fulladdmult port map(a=>sig1, x=>m(0), y=>q(1), ci=>'0', s=>sig4, co=>cout4);
     inst5 : fulladdmult port map(a=>sig2, x=>m(1), y=>q(1), ci=>cout4, s=>sig5, co=>cout5);
     inst6 : fulladdmult port map(a=>sig3, x=>m(2), y=>q(1), ci=>cout5, s=>sig6, co=>cout6);
