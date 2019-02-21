@@ -2,14 +2,14 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity eightToThree is
-  port(din : IN std_logic_vector(7 downto 0)
-      yout : OUT std_logic_vector(2 downto 0));
+  port(din : IN std_logic_vector(7 downto 0);
+      y   : OUT std_logic_vector(2 downto 0));
 end eightToThree;
 
 architecture Brown of eightToThree is
 
 begin
-  yout <= "000" when (din(0) = '1') else
+  y <= "000" when (din(0) = '1') else
           "001" when (din(1) = '1') else
           "010" when (din(2) = '1') else
           "011" when (din(3) = '1') else
