@@ -1,0 +1,251 @@
+|VHDLMultiplier
+m[0] => fulladdmult:inst.x
+m[0] => fulladdmult:inst4.x
+m[0] => fulladdmult:inst8.x
+m[0] => fulladdmult:inst12.x
+m[1] => fulladdmult:inst1.x
+m[1] => fulladdmult:inst5.x
+m[1] => fulladdmult:inst9.x
+m[1] => fulladdmult:inst13.x
+m[2] => fulladdmult:inst2.x
+m[2] => fulladdmult:inst6.x
+m[2] => fulladdmult:inst10.x
+m[2] => fulladdmult:inst14.x
+m[3] => fulladdmult:inst3.x
+m[3] => fulladdmult:inst7.x
+m[3] => fulladdmult:inst11.x
+m[3] => fulladdmult:inst15.x
+q[0] => fulladdmult:inst.y
+q[0] => fulladdmult:inst1.y
+q[0] => fulladdmult:inst2.y
+q[0] => fulladdmult:inst3.y
+q[1] => fulladdmult:inst4.y
+q[1] => fulladdmult:inst5.y
+q[1] => fulladdmult:inst6.y
+q[1] => fulladdmult:inst7.y
+q[2] => fulladdmult:inst8.y
+q[2] => fulladdmult:inst9.y
+q[2] => fulladdmult:inst10.y
+q[2] => fulladdmult:inst11.y
+q[3] => fulladdmult:inst12.y
+q[3] => fulladdmult:inst13.y
+q[3] => fulladdmult:inst14.y
+q[3] => fulladdmult:inst15.y
+p[0] <= fulladdmult:inst.s
+p[1] <= fulladdmult:inst4.s
+p[2] <= fulladdmult:inst8.s
+p[3] <= fulladdmult:inst12.s
+p[4] <= fulladdmult:inst13.s
+p[5] <= fulladdmult:inst14.s
+p[6] <= fulladdmult:inst15.s
+p[7] <= fulladdmult:inst15.co
+
+
+|VHDLMultiplier|fulladdmult:inst
+a => s.IN1
+a => co.IN1
+a => co.IN0
+x => b.IN0
+y => b.IN1
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VHDLMultiplier|fulladdmult:inst1
+a => s.IN1
+a => co.IN1
+a => co.IN0
+x => b.IN0
+y => b.IN1
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VHDLMultiplier|fulladdmult:inst2
+a => s.IN1
+a => co.IN1
+a => co.IN0
+x => b.IN0
+y => b.IN1
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VHDLMultiplier|fulladdmult:inst3
+a => s.IN1
+a => co.IN1
+a => co.IN0
+x => b.IN0
+y => b.IN1
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VHDLMultiplier|fulladdmult:inst4
+a => s.IN1
+a => co.IN1
+a => co.IN0
+x => b.IN0
+y => b.IN1
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VHDLMultiplier|fulladdmult:inst5
+a => s.IN1
+a => co.IN1
+a => co.IN0
+x => b.IN0
+y => b.IN1
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VHDLMultiplier|fulladdmult:inst6
+a => s.IN1
+a => co.IN1
+a => co.IN0
+x => b.IN0
+y => b.IN1
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VHDLMultiplier|fulladdmult:inst7
+a => s.IN1
+a => co.IN1
+a => co.IN0
+x => b.IN0
+y => b.IN1
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VHDLMultiplier|fulladdmult:inst8
+a => s.IN1
+a => co.IN1
+a => co.IN0
+x => b.IN0
+y => b.IN1
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VHDLMultiplier|fulladdmult:inst9
+a => s.IN1
+a => co.IN1
+a => co.IN0
+x => b.IN0
+y => b.IN1
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VHDLMultiplier|fulladdmult:inst10
+a => s.IN1
+a => co.IN1
+a => co.IN0
+x => b.IN0
+y => b.IN1
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VHDLMultiplier|fulladdmult:inst11
+a => s.IN1
+a => co.IN1
+a => co.IN0
+x => b.IN0
+y => b.IN1
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VHDLMultiplier|fulladdmult:inst12
+a => s.IN1
+a => co.IN1
+a => co.IN0
+x => b.IN0
+y => b.IN1
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VHDLMultiplier|fulladdmult:inst13
+a => s.IN1
+a => co.IN1
+a => co.IN0
+x => b.IN0
+y => b.IN1
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VHDLMultiplier|fulladdmult:inst14
+a => s.IN1
+a => co.IN1
+a => co.IN0
+x => b.IN0
+y => b.IN1
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VHDLMultiplier|fulladdmult:inst15
+a => s.IN1
+a => co.IN1
+a => co.IN0
+x => b.IN0
+y => b.IN1
+ci => s.IN1
+ci => co.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
