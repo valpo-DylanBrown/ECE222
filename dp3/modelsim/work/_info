@@ -1,0 +1,131 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Dylan/Documents/GitHub/ECE222/hw04
+Edicegame
+Z0 w1551340550
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Dylan/Documents/GitHub/ECE222/dp3/modelsim
+Z4 8C:/Users/Dylan/Documents/GitHub/ECE222/dp3/modelsim/dicegame.vhd
+Z5 FC:/Users/Dylan/Documents/GitHub/ECE222/dp3/modelsim/dicegame.vhd
+l0
+L4
+VnnQ1Ubo:lTH_jMZ[QJYRm0
+!s100 2z`B3e`b2mk>6TkLCA1AB3
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1551340612
+!i10b 1
+Z8 !s108 1551340612.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Dylan/Documents/GitHub/ECE222/dp3/modelsim/dicegame.vhd|
+Z10 !s107 C:/Users/Dylan/Documents/GitHub/ECE222/dp3/modelsim/dicegame.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Adataflow
+R1
+R2
+DEx4 work 8 dicegame 0 22 nnQ1Ubo:lTH_jMZ[QJYRm0
+l16
+L10
+VMCEH=4Ao_[dUn;Bjna7ze3
+!s100 ]THNVlmIjX]Wf`C^Vhn302
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Egametest
+Z13 w1551340599
+Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z15 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R1
+R2
+R3
+Z16 8C:/Users/Dylan/Documents/GitHub/ECE222/dp3/modelsim/dicetest.vhd
+Z17 FC:/Users/Dylan/Documents/GitHub/ECE222/dp3/modelsim/dicetest.vhd
+l0
+L9
+VnNDROnj^WFeUfee^KU6]g3
+!s100 5AXXG7iUFh_8BTzTm;D672
+R6
+32
+R7
+!i10b 1
+R8
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Dylan/Documents/GitHub/ECE222/dp3/modelsim/dicetest.vhd|
+Z19 !s107 C:/Users/Dylan/Documents/GitHub/ECE222/dp3/modelsim/dicetest.vhd|
+!i113 1
+R11
+R12
+Adicetest
+R14
+R15
+R1
+R2
+DEx4 work 8 gametest 0 22 nNDROnj^WFeUfee^KU6]g3
+l26
+L18
+V_HB`aVffDIM]gdcfF<J>X1
+!s100 ]n8e:=F1VmWJi6afmEd2=3
+R6
+32
+R7
+!i10b 1
+R8
+R18
+R19
+!i113 1
+R11
+R12
+Etester
+R13
+R1
+R2
+R3
+R16
+R17
+l0
+L88
+VEhnn00i>2aDFSJ@_3c6m_0
+!s100 VlOmM24iVnXghAK5E;=^_0
+R6
+32
+R7
+!i10b 1
+R8
+R18
+R19
+!i113 1
+R11
+R12
+Abrown
+R1
+R2
+DEx4 work 6 tester 0 22 Ehnn00i>2aDFSJ@_3c6m_0
+l113
+L92
+VM5o0B1Ma3CN?b?`Z^OQJA0
+!s100 5VO:Ql;jd>e4hVEn[j?hP1
+R6
+32
+R7
+!i10b 1
+R8
+R18
+R19
+!i113 1
+R11
+R12
