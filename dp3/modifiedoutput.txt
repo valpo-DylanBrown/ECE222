@@ -1,0 +1,7 @@
+DA = AD'E'G'H'I + C'F'G + GI' + A'G
+DB = AD'EG'H'I + ADG'H'I + ACF'GI + AFGI + BH
+DC = AD'EG'H'I + ACF'GI + BHI + A'H'
+WIN = HI'
+LOSE = HI
+ROLL = A'H'I
+SP = AD'E'G'H'I
