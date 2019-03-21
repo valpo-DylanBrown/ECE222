@@ -20,7 +20,6 @@ entity Adders is
       co     : OUT std_logic;
       s      : OUT std_logic_vector(N-1 downto 0));
 end Adders;
-
 architecture struct of Adders is
   signal int_carry : std_logic_vector(n downto 0);
   component OneBitAdder is
