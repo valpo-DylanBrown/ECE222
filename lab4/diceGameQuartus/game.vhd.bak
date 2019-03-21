@@ -1,0 +1,170 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity game is
+port(clk, reset, rb   : IN std_logic;
+    win, lose         : OUT std_logic;
+    disp1, disp2      : OUT std_logic_vector(6 downto 0));
+end game;
+architecture final of game is
+  signal s  : std_logic_vector(1 downto 0);
+  signal tmpsum : std_logic_vector(3 downto 0);
+  signal tmpcnt1, tmpcnt2 : std_logic_vector(3 downto 0);
+  component DiceGame is
+     port (Rb, Reset, CLK: in std_logic;
+           Sum: in std_logic_vector(3 downto 0);
+           Roll, Win, Lose: out std_logic);
+  end component;
+  component Counter is
+    port(Clk, Roll: in std_logic;
+         Cnt1, Cnt2: out std_logic_vector(3 downto 0));
+  end component;
+  component slow_clk is
+    port (In_Clk: in std_logic;
+          Out_Clk: out std_logic);
+  end component;
+  component Display IS
+  port (count: in std_logic_vector(3 downto 0);
+        segs : out std_logic_vector(6 downto 0));
+  END component;
+begin
+
+  clock: slow_clk port map(In_Clk=>Clk, Out_Clk=>s(0));
+  cntr: counter port map(Clk=>s(0), roll=>s(1), cnt1=>tmpcnt1, cnt2=>tmpcnt2);
+  tmpsum <= tmpcnt1 + tmpcnt2;
+  controller: DiceGame port map(Rb=>rb, Reset=>reset, clk=>s(0), sum=>tmpsum, Roll=>s(1), Win=>win, Lose=>lose);
+  display1: Display port map (count=>tmpcnt1, segs=>disp1);
+  display2: Display port map (count=>tmpcnt2, segs=>disp2);
+end architecture;
+
+library ieee;
+use ieee.std_logic_1164.all;
+entity DiceGame is
+   port (Rb, Reset, CLK: in std_logic;
+         Sum: in std_logic_vector(3 downto 0);
+         Roll, Win, Lose: out std_logic);
+end DiceGame;
+
+architecture dataflow of DiceGame is
+
+  signal Sp,Eq,D7,D711,D2312: std_logic:='0';
+  signal FA,FB,FC,A,B,C :std_logic:='0';
+  signal Point: std_logic_vector(3 downto 0):="0001";
+
+begin
+
+   -- Clock Process
+   process(Clk)
+   begin
+     if (Clk'EVENT AND clk='1') then
+       A <= FA;  B <= FB;   C <= FC;
+       if Sp = '1' then Point <= Sum; end if;
+     end if;
+   end process;
+
+   -- Equations for Tester Logic and comparator (D7, D711, D2312, Eq)
+   D7 <= '1' when sum = "0111" else
+         '0';
+   D711 <= '1' when sum = "1011" else
+           '1' when sum = "0111" else
+           '0';
+   D2312 <= '1' when sum = "0010" else
+            '1' when sum = "0011" else
+            '1' when sum = "1100" else
+            '0';
+   Eq <= '1' when sum = point else
+         '0';
+
+
+   -- Equations for Next State Logic and to save Point value (FA, FB, FC, Sp, Win, Lose, Roll)
+   FA <= (Rb AND NOT D711 AND NOT D2312 AND NOT A AND NOT B AND C) OR (NOT D7 AND NOT Eq AND A) OR (A AND NOT C) OR (NOT Rb AND A);
+   FB <= (Rb AND NOT D711 AND D2312 AND NOT A AND NOT B AND C) OR (Rb AND D711 AND NOT A AND NOT B AND C) OR (Rb AND D7 AND NOT Eq AND A AND C) OR (Rb AND Eq AND A AND C) OR (Reset AND B);
+   FC <= (Rb AND NOT D711 AND D2312 AND NOT A AND NOT B AND C) OR (Rb AND D7 AND NOT Eq AND A AND C) OR (Reset AND B AND C) OR (NOT Rb AND NOT B);
+   Win <= (B AND NOT C);
+   Lose <= (B AND C);
+   Roll <= (NOT Rb AND NOT B AND C);
+   Sp <= (Rb AND NOT D711 AND NOT D2312 AND NOT A AND NOT B AND C);
+
+end dataflow;
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+
+entity Counter is
+  port(Clk, Roll: in std_logic;
+       Cnt1, Cnt2: out std_logic_vector(3 downto 0));
+end Counter;
+
+architecture Count of Counter is
+begin
+
+  process (Clk)
+
+  variable count1, count2: integer range 1 to 7:=1;
+  begin
+    if Clk='1' then
+      if Roll='1' then
+         count1 := count1 + 1;
+         if count1 = 7 then
+			count1 := 1;
+			count2 := count2 + 1;
+			if count2 = 7 then
+				count2 := 1;
+			end if;
+		 end if;
+	  end if;
+	  Cnt1 <= conv_std_logic_vector(count1, 4);
+	  Cnt2 <= conv_std_logic_vector(count2, 4);
+	end if;
+  end process;
+end Count;
+
+--
+-- Slows Clock Down
+-- Eric W. Johnson
+-- ECE 222
+-- March 24, 2009
+--
+
+library ieee;
+use ieee.std_logic_1164.all;
+entity slow_clk is
+  port (In_Clk: in std_logic;
+        Out_Clk: out std_logic);
+end slow_clk;
+
+architecture behav of slow_clk is
+begin
+   Process (In_Clk)
+      Variable cnt : INTEGER RANGE 0 TO 524287;
+   Begin
+      IF (In_Clk'EVENT AND In_Clk='1') THEN
+         cnt := cnt + 1;
+         IF cnt = 524287 THEN
+            Out_Clk <= '1';
+         ELSE
+            Out_Clk <= '0';
+         END IF;
+      END IF;
+   End Process;
+end behav;
+library ieee;
+use ieee.std_logic_1164.all;
+ENTITY Display IS
+port (count: in std_logic_vector(3 downto 0);
+      segs : out std_logic_vector(6 downto 0));
+END Display;
+ARCHITECTURE dataflow OF Display IS
+BEGIN
+    with count select
+      segs<=  "0000001" when "0000",
+              "1001111" when "0001",
+              "0010010" when "0010",
+              "0000110" when "0011",
+              "1001100" when "0100",
+              "0100100" when "0101",
+              "0100000" when "0110",
+              "1111111" when OTHERS;
+END dataflow;
