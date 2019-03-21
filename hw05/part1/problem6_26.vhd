@@ -25,20 +25,23 @@ end behav;
 library ieee;
 use ieee.std_logic_1164.all;
 entity h3to8 is
-  port(en : IN std_logic;
+  port(enable : IN std_logic;
        b  : IN std_logic_vector(2 downto 0);
        z   : OUT std_logic_vector(7 downto 0));
 end h3to8;
 
 architecture behav of h3to8 is
+signal wire1, wire2  : std_logic;
 component if2to4 is
   port(en : IN std_logic;
        a  : IN std_logic_vector(1 downto 0);
        y   : OUT std_logic_vector(3 downto 0));
 end component;
-
+--(NOT b(2) AND
 begin
-  inst1: if2to4 port map(en=>(NOT b(2) AND en), a(0)=>b(0), a(1)=>b(1), y=>z(3 downto 0));
-  inst2: if2to4 port map(en=>(b(2) AND en), a(0)=>b(0), a(1)=>b(1), y=>z(7 downto 4));
+  wire1<= NOT b(2) AND enable;
+  wire2<= b(2) AND enable;
+  inst1: if2to4 port map(en=>wire1, a(0)=>b(0), a(1)=>b(1), y=>z(3 downto 0));
+  inst2: if2to4 port map(en=>wire2, a(0)=>b(0), a(1)=>b(1), y=>z(7 downto 4));
 
 end behav;
