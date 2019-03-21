@@ -1,18 +1,16 @@
 library ieee;
 use ieee.std_logic_1164.all;
-
 entity OneBitAdder is
   port(a, b, cin  : IN std_logic;
       s, co       : OUT std_logic);
 end OneBitAdder;
 
 architecture dataflow of OneBitAdder is
-
   begin
     s<= a xor b xor cin;
     co<= (a AND b) OR (a AND cin) OR (b AND cin);
-
 end dataflow;
+
 library ieee;
 use ieee.std_logic_1164.all;
 entity Adders is
@@ -36,10 +34,10 @@ architecture struct of Adders is
     end generate;
     co <= int_carry(N);
 end struct;
+
 library ieee;
 use ieee.std_logic_1164.all;
--- MY BIRTHDAY IS 07/12/99
--- SO I NEED A 12 BIT ADDER
+-- MY BIRTHDAY IS 07/12/99, SO I NEED A 12 BIT ADDER
 entity testbench is
   port(x, y   : IN std_logic_vector(11 downto 0);
       sum     : OUT std_logic_vector(11 downto 0);
