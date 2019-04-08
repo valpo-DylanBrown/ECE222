@@ -6,7 +6,7 @@ entity Elevator is
 end Elevator;
 
 architecture behav of Elevator is
-
+  type State is (S0, S1, S2, S3);
   signal
 
 begin
