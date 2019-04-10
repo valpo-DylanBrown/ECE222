@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Dylan/Documents/GitHub/ECE222/hw05/part2
+Ethunderbird
+Z0 w1554792638
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Dylan/Documents/GitHub/ECE222/dp4/modelsim
+Z4 8C:/Users/Dylan/Documents/GitHub/ECE222/dp4/modelsim/thunderbird.vhd
+Z5 FC:/Users/Dylan/Documents/GitHub/ECE222/dp4/modelsim/thunderbird.vhd
+l0
+L4
+V2_Kl=ND2YF@TWTj8Me3aJ1
+!s100 IX9Z;;`:iHS:W]BkQPA9P2
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1554870064
+!i10b 1
+Z8 !s108 1554870064.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Dylan/Documents/GitHub/ECE222/dp4/modelsim/thunderbird.vhd|
+Z10 !s107 C:/Users/Dylan/Documents/GitHub/ECE222/dp4/modelsim/thunderbird.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abehav
+R1
+R2
+DEx4 work 11 thunderbird 0 22 2_Kl=ND2YF@TWTj8Me3aJ1
+l15
+L10
+VL4oiFjfl<k4h9HKng9:fk3
+!s100 mRbSo0K?GI[6<AkH5DTZP1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ethundertest
+Z13 w1554869994
+R1
+R2
+R3
+Z14 8C:\Users\Dylan\Documents\GitHub\ECE222\dp4\modelsim\ThunderTest.vhd
+Z15 FC:\Users\Dylan\Documents\GitHub\ECE222\dp4\modelsim\ThunderTest.vhd
+l0
+L4
+VD?AFaZdbi6GBR]eWijjQY1
+!s100 8G2?nkJQFkbB6342[cQL30
+R6
+32
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Dylan\Documents\GitHub\ECE222\dp4\modelsim\ThunderTest.vhd|
+Z17 !s107 C:\Users\Dylan\Documents\GitHub\ECE222\dp4\modelsim\ThunderTest.vhd|
+!i113 1
+R11
+R12
+Abrown
+R1
+R2
+Z18 DEx4 work 11 thundertest 0 22 D?AFaZdbi6GBR]eWijjQY1
+l21
+L8
+VFDk0mc7eX@?mMcYRUN:l:3
+!s100 ?ooLEcZhLZMYk3cWcW:Ce2
+R6
+32
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
