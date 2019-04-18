@@ -1,0 +1,59 @@
+|thunderbird
+clk => slow_clk:slow.In_Clk
+turn[0] => controller:cont.turn[0]
+turn[1] => controller:cont.turn[1]
+lights[0] <= controller:cont.lights[0]
+lights[1] <= controller:cont.lights[1]
+lights[2] <= controller:cont.lights[2]
+lights[3] <= controller:cont.lights[3]
+lights[4] <= controller:cont.lights[4]
+lights[5] <= controller:cont.lights[5]
+
+
+|thunderbird|slow_clk:slow
+In_Clk => Out_Clk~reg0.CLK
+In_Clk => cnt[0].CLK
+In_Clk => cnt[1].CLK
+In_Clk => cnt[2].CLK
+In_Clk => cnt[3].CLK
+In_Clk => cnt[4].CLK
+In_Clk => cnt[5].CLK
+In_Clk => cnt[6].CLK
+In_Clk => cnt[7].CLK
+In_Clk => cnt[8].CLK
+In_Clk => cnt[9].CLK
+In_Clk => cnt[10].CLK
+In_Clk => cnt[11].CLK
+In_Clk => cnt[12].CLK
+In_Clk => cnt[13].CLK
+In_Clk => cnt[14].CLK
+In_Clk => cnt[15].CLK
+In_Clk => cnt[16].CLK
+In_Clk => cnt[17].CLK
+In_Clk => cnt[18].CLK
+In_Clk => cnt[19].CLK
+In_Clk => cnt[20].CLK
+In_Clk => cnt[21].CLK
+In_Clk => cnt[22].CLK
+In_Clk => cnt[23].CLK
+In_Clk => cnt[24].CLK
+Out_Clk <= Out_Clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|thunderbird|controller:cont
+clk => PS~1.DATAIN
+clr => PS~3.DATAIN
+turn[0] => Equal0.IN1
+turn[0] => Equal1.IN0
+turn[0] => Equal2.IN1
+turn[1] => Equal0.IN0
+turn[1] => Equal1.IN1
+turn[1] => Equal2.IN0
+lights[0] <= lights.DB_MAX_OUTPUT_PORT_TYPE
+lights[1] <= lights.DB_MAX_OUTPUT_PORT_TYPE
+lights[2] <= lights.DB_MAX_OUTPUT_PORT_TYPE
+lights[3] <= lights.DB_MAX_OUTPUT_PORT_TYPE
+lights[4] <= lights.DB_MAX_OUTPUT_PORT_TYPE
+lights[5] <= lights.DB_MAX_OUTPUT_PORT_TYPE
+
+

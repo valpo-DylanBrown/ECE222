@@ -1,0 +1,11 @@
+
+State Machine - |thunderbird|controller:cont|PS
+Name PS.SR3 PS.SR2 PS.SR1 PS.SL3 PS.SL2 PS.SL1 PS.SH PS.S0 
+PS.S0 0 0 0 0 0 0 0 0 
+PS.SH 0 0 0 0 0 0 1 1 
+PS.SL1 0 0 0 0 0 1 0 1 
+PS.SL2 0 0 0 0 1 0 0 1 
+PS.SL3 0 0 0 1 0 0 0 1 
+PS.SR1 0 0 1 0 0 0 0 1 
+PS.SR2 0 1 0 0 0 0 0 1 
+PS.SR3 1 0 0 0 0 0 0 1 
